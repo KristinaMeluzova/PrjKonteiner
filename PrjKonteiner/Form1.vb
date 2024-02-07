@@ -46,8 +46,9 @@
         txtValjundTekst1.Text = Pooraja.pooraTekst
     End Sub
 
-
+    Function countCharacters() As Integer
     Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         Dim tekstLen As Integer = Len(txtSisendTekst)
     End Sub
+
 End Class
