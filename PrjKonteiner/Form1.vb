@@ -47,10 +47,12 @@ Public Class Form1
         Pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = Pooraja.pooraTekst
     End Sub
-
+    'Kirjutame funktsioon täishäälikute arvu tekstis leidmiseks kasutades funktsioon Len()
     Function charCount(text As String) As Integer
         Return Len(text)
     End Function
+
+    'Siin kirjutame leitud eelmisel funktsioonil arvud txtSisendTekst tekstist Labeli 2
     Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         Label2.Text = charCount(txtSisendTekst.Text)
     End Sub
