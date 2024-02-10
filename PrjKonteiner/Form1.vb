@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Runtime.Remoting.Contexts
+
+Public Class Form1
 
 
     Private Sub btnPoora1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
@@ -46,6 +48,10 @@
         txtValjundTekst1.Text = Pooraja.pooraTekst
     End Sub
 
-
-
+    Function charCount(text As String) As Integer
+        Return Len(text)
+    End Function
+    Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
+        Label2.Text = charCount(txtSisendTekst.Text)
+    End Sub
 End Class
