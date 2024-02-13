@@ -35,6 +35,7 @@ Partial Class Form1
         Me.btnStop = New System.Windows.Forms.Button()
         Me.timerUuenda = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.CAlgoCheck = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtSisendTekst
@@ -60,6 +61,7 @@ Partial Class Form1
         Me.txtValjundTekst1.Location = New System.Drawing.Point(152, 142)
         Me.txtValjundTekst1.Margin = New System.Windows.Forms.Padding(2)
         Me.txtValjundTekst1.Name = "txtValjundTekst1"
+        Me.txtValjundTekst1.ReadOnly = True
         Me.txtValjundTekst1.Size = New System.Drawing.Size(131, 20)
         Me.txtValjundTekst1.TabIndex = 2
         '
@@ -88,6 +90,7 @@ Partial Class Form1
         Me.txtValjundTekst2.Location = New System.Drawing.Point(152, 172)
         Me.txtValjundTekst2.Margin = New System.Windows.Forms.Padding(2)
         Me.txtValjundTekst2.Name = "txtValjundTekst2"
+        Me.txtValjundTekst2.ReadOnly = True
         Me.txtValjundTekst2.Size = New System.Drawing.Size(131, 20)
         Me.txtValjundTekst2.TabIndex = 5
         '
@@ -143,11 +146,22 @@ Partial Class Form1
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Label2"
         '
+        'CAlgoCheck
+        '
+        Me.CAlgoCheck.AutoSize = True
+        Me.CAlgoCheck.Location = New System.Drawing.Point(341, 140)
+        Me.CAlgoCheck.Name = "CAlgoCheck"
+        Me.CAlgoCheck.Size = New System.Drawing.Size(124, 17)
+        Me.CAlgoCheck.TabIndex = 11
+        Me.CAlgoCheck.Text = "CAlgoritmilinePooraja"
+        Me.CAlgoCheck.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(477, 291)
+        Me.Controls.Add(Me.CAlgoCheck)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
@@ -179,4 +193,5 @@ Partial Class Form1
     Friend WithEvents btnStop As Button
     Friend WithEvents timerUuenda As Timer
     Friend WithEvents Label2 As Label
+    Friend WithEvents CAlgoCheck As CheckBox
 End Class
