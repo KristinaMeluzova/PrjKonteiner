@@ -1,7 +1,7 @@
 ﻿Imports System.Runtime.Remoting.Contexts
+Imports PrjTekstiPooraja
 
 Public Class Form1
-
 
     Private Sub btnPoora1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
         Handles btnPoora1.Click
@@ -53,7 +53,17 @@ Public Class Form1
     End Function
 
     'Siin kirjutame leitud eelmisel funktsioonil arvud txtSisendTekst tekstist Labeli 2
-    Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
+    Private Sub txtSisendTekst_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSisendTekst.TextChanged
         Label2.Text = charCount(txtSisendTekst.Text)
+    End Sub
+
+    Private Sub CAlgoCheck_CheckedChanged(sender As Object, e As EventArgs) _
+        Handles CAlgoCheck.CheckedChanged
+        Dim teisendus As PrjTekstiPooraja.ITeisendused
+        If CAlgoCheck.Checked Then
+            teisendus = New CAlgoritmilinePooraja
+        Else
+            teisendus = New CTekstiPooraja
+        End If
     End Sub
 End Class
