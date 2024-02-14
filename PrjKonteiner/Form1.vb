@@ -2,7 +2,6 @@
 Imports PrjTekstiPooraja
 
 Public Class Form1
-
     Private Sub btnPoora1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
         Handles btnPoora1.Click
         'Objekti loomine liidese baasil; referentsmuutuja pooraja deklatsatsioon
@@ -47,14 +46,28 @@ Public Class Form1
         Pooraja.strTekst = txtSisendTekst.Text
         txtValjundTekst1.Text = Pooraja.pooraTekst
     End Sub
-    'Kirjutame funktsioon täishäälikute arvu tekstis leidmiseks kasutades funktsioon Len()
+    'Kirjutame funktsioon pikkuse arvu tekstis leidmiseks kasutades funktsioon Len()
     Function charCount(text As String) As Integer
         Return Len(text)
     End Function
+    Function sortCount(sisendtext As String) As Integer 'täishäälike leidmiseks
+        Dim characters As String = "aeiouAEIOU"
+        Dim sortString As String = ""
+        Dim i As Integer = 0
+        For Each character As Char In characters
+            If sisendtext.Contains(character) Then
+                sortString &= character
+            End If
+        Next
+
+        Return Len(sortString)
+    End Function
 
     'Siin kirjutame leitud eelmisel funktsioonil arvud txtSisendTekst tekstist Labeli 2
-    Private Sub txtSisendTekst_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSisendTekst.TextChanged
-        Label2.Text = charCount(txtSisendTekst.Text)
+    Private Sub txtSisendTekst_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) _
+        Handles txtSisendTekst.TextChanged
+        Label2.Text = charCount(txtSisendTekst.Text) 'Teksti pikkuse arv
+        Label3.Text = sortCount(txtSisendTekst.Text) 'täishäälikke pikkuse arv
     End Sub
 
     Private Sub CAlgoCheck_CheckedChanged(sender As Object, e As EventArgs) _
