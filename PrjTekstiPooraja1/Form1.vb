@@ -1,13 +1,13 @@
 ﻿Imports System.Runtime.Remoting.Contexts
-Imports PrjTekstiPooraja1
+Imports PrjTekstiPooraja
 
 Public Class Form1
     Private Sub btnPoora1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
         Handles btnPoora1.Click
         'Objekti loomine liidese baasil; referentsmuutuja pooraja deklatsatsioon
-        Dim Pooraja As PrjTekstiPooraja1.ITeisendused
+        Dim Pooraja As PrjTekstiPooraja.ITeisendused
         'Seadistame referentsmuutuja viitama uuele objektile
-        Pooraja = New PrjTekstiPooraja1.CTekstiPooraja
+        Pooraja = New PrjTekstiPooraja.CTekstiPooraja
         'TEOSTAME TEKSTI PÖÖRAMISE KASUTADES PARAMEETRISEERITA FUNKTSIOONI pooraTekst 
         'NING LIIDESE ATRIBUUTI strTekst
         Pooraja.strTekst = txtSisendTekst.Text
@@ -17,9 +17,9 @@ Public Class Form1
     Private Sub btnPoora2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
         Handles btnPoora2.Click
         'Objekti loomine liidese baasil; referentsmuutuja pooraja deklatsatsioon
-        Dim Pooraja As PrjTekstiPooraja1.ITeisendused
+        Dim Pooraja As PrjTekstiPooraja.ITeisendused
         'Seadistame referentsmuutuja viitama uuele objektile
-        Pooraja = New PrjTekstiPooraja1.CTekstiPooraja
+        Pooraja = New PrjTekstiPooraja.CTekstiPooraja
         'TEOSTAME TEKSTI PÖÖRAMISE KASUTADES PARAMEETRISEERITA FUNKTSIOONI pooraTekst 
         'NING LIIDESE ATRIBUUTI strTekst
         Pooraja.strTekst = txtSisendTekst.Text
@@ -36,12 +36,11 @@ Public Class Form1
         btnStart.Enabled = True
     End Sub
 
-    Private Sub timerUuenda_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) _
-        Handles timerUuenda.Tick
+    Private Sub timerUuenda_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles timerUuenda.Tick
         'Objekti loomine liidese baasil; referentsmuutuja pooraja deklatsatsioon
-        Dim Pooraja As PrjTekstiPooraja1.ITeisendused
+        Dim Pooraja As PrjTekstiPooraja.ITeisendused
         'Seadistame referentsmuutuja viitama uuele objektile
-        Pooraja = New PrjTekstiPooraja1.CTekstiPooraja
+        Pooraja = New PrjTekstiPooraja.CTekstiPooraja
         'TEOSTAME TEKSTI PÖÖRAMISE KASUTADES PARAMEETRISEERITA FUNKTSIOONI pooraTekst 
         'NING LIIDESE ATRIBUUTI strTekst
         Pooraja.strTekst = txtSisendTekst.Text
@@ -51,27 +50,29 @@ Public Class Form1
     Function charCount(text As String) As Integer
         Return Len(text)
     End Function
-
-    Private Function countChar(ByVal text As String) As Integer
-        Dim charstate As Integer = 0  'tääshääliku arvutamiseks 
-        For Each charac As Char In text.ToLower()
-            If "aeiouy".Contains(charac) Then
-                charstate += 1
+    Function sortCount(sisendtext As String) As Integer 'täishäälike leidmiseks
+        Dim characters As String = "aeiouAEIOU"
+        Dim sortString As String = ""
+        Dim i As Integer = 0
+        For Each character As Char In characters
+            If sisendtext.Contains(character) Then
+                sortString &= character
             End If
         Next
-        Return charstate
+
+        Return Len(sortString)
     End Function
 
     'Siin kirjutame leitud eelmisel funktsioonil arvud txtSisendTekst tekstist Labeli 2
     Private Sub txtSisendTekst_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) _
-    Handles txtSisendTekst.TextChanged
+        Handles txtSisendTekst.TextChanged
         Label2.Text = charCount(txtSisendTekst.Text) 'Teksti pikkuse arv
-        Label3.Text = countChar(txtSisendTekst.Text).ToString()  'täishäälike pikkuse arv
+        Label3.Text = sortCount(txtSisendTekst.Text) 'täishäälikke pikkuse arv
     End Sub
 
-    Private Sub CAlgoCheck_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) _
+    Private Sub CAlgoCheck_CheckedChanged(sender As Object, e As EventArgs) _
         Handles CAlgoCheck.CheckedChanged
-        Dim teisendus As PrjTekstiPooraja1.ITeisendused
+        Dim teisendus As PrjTekstiPooraja.ITeisendused
         If CAlgoCheck.Checked Then
             teisendus = New CAlgoritmilinePooraja
         Else
