@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>PrjTekstiPooraja1</RootNamespace>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyName>PRjTekstiPooraja1</AssemblyName>
+  </PropertyGroup>
+	
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+    <OutputPath>C:\Users\Julia\source\repos\KristinaMeluzova\PrjKonteiner\PrjTekstiPooraja1\bin\Debug\net7.0</OutputPath>
+  </PropertyGroup>
+	
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\Julia\source\repos\KristinaMeluzova\PrjKonteiner\PrjTekstiPooraja1\bin\Debug\net7.0</OutputPath>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <Compile Remove="Form1.Designer.vb" />
+    <Compile Remove="Form1.vb" />
+  </ItemGroup>
+
+</Project>
