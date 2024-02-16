@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>PrjTekstiPooraja1</RootNamespace>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>PRjTekstiPooraja1</AssemblyName>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackAsTool>False</PackAsTool>
   </PropertyGroup>
 	
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,6 +20,10 @@
   <ItemGroup>
     <Compile Remove="Form1.Designer.vb" />
     <Compile Remove="Form1.vb" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
