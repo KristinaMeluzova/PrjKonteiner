@@ -67,7 +67,7 @@ Public Class formKasutajaAken
     Private Sub txtSisendTekst_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) _
     Handles txtSisendTekst.TextChanged
         Label2.Text = charCount(txtSisendTekst.Text) 'Teksti pikkuse arv
-        Label3.Text = countChar(txtSisendTekst.Text).ToString()  'täishäälike pikkuse arv
+        Label3.Text = countChar(txtSisendTekst.Text) 'täishäälike pikkuse arv
     End Sub
 
     Private Sub CAlgoCheck_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) _
