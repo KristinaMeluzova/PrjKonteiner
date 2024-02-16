@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class formKasutajaAken
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -137,6 +137,7 @@ Partial Class Form1
         '
         'timerUuenda
         '
+        Me.timerUuenda.Interval = 5000
         '
         'Label2
         '
@@ -166,7 +167,7 @@ Partial Class Form1
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Label3"
         '
-        'Form1
+        'formKasutajaAken
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -185,7 +186,7 @@ Partial Class Form1
         Me.Controls.Add(Me.SisendTekst)
         Me.Controls.Add(Me.txtSisendTekst)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "Form1"
+        Me.Name = "formKasutajaAken"
         Me.Text = "formKasutajaAken"
         Me.ResumeLayout(False)
         Me.PerformLayout()

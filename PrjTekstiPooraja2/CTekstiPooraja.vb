@@ -1,4 +1,4 @@
-Public Class CTekstiPooraja
+ï»¿Public Class CTekstiPooraja
     Implements ITeisendused
 
     'Klassi CTekstiPooraja atribuudid (muutujad)
@@ -11,44 +11,44 @@ Public Class CTekstiPooraja
     'Atribuut intAlgus seadistamine
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
-            Return intAlgusSymbol 'atribuudi küsimusel tagasta intAlgusSymbol
+            Return intAlgusSymbol 'atribuudi kÃ¼simusel tagasta intAlgusSymbol
         End Get
         Set(value As Integer)
-            intAlgusSymbol = value 'atribuudi väärtuste seadistamine
+            intAlgusSymbol = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
     'Atribuut intLopp seadistamine
     Private Property intLopp As Integer Implements ITeisendused.intLopp
         Get
-            Return intLoppSymbol 'atribuudi küsimusel tagasta intLoppSymbol
+            Return intLoppSymbol 'atribuudi kÃ¼simusel tagasta intLoppSymbol
         End Get
         Set(value As Integer)
-            intLoppSymbol = value 'atribuudi väärtuste seadistamine
+            intLoppSymbol = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
     'Atribuut strTekst seadistamine
     Private Property strTekst As String Implements ITeisendused.strTekst
         Get
-            Return strPooratavTekst 'atribuudi küsimusel tagasta strPooratavTekst
+            Return strPooratavTekst 'atribuudi kÃ¼simusel tagasta strPooratavTekst
         End Get
         Set(value As String)
-            strPooratavTekst = value 'atribuudi väärtuste seadistamine
+            strPooratavTekst = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
-    'Meetod, mis võtab atribuunist
-    'strSisendTekst väärtuse
-    'ja pöörab selle stringi tagurpidi
+    'Meetod, mis vÃµtab atribuunist
+    'strSisendTekst vÃ¤Ã¤rtuse
+    'ja pÃ¶Ã¶rab selle stringi tagurpidi
     Private Function pooraTekst() As String _
         Implements ITeisendused.pooraTekst
         Return StrReverse(strPooratavTekst)
     End Function
 
-    'Meetod, mis pöörab tagurpidi
+    'Meetod, mis pÃ¶Ã¶rab tagurpidi
     'sisendparamteetrina strSisendTekst antud avaldise
-    'ja salvestab väärtuse atribuuti strPooratavTekst
+    'ja salvestab vÃ¤Ã¤rtuse atribuuti strPooratavTekst
 
     Private Sub teisendaTekst(ByRef strSisendTekst As String) _
         Implements ITeisendused.teisendaTekst
@@ -70,34 +70,34 @@ Public Class CAlgoritmilinePooraja
     'Atribuut intAlgus seadistamine
     Private Property intAlgus As Integer Implements ITeisendused.intAlgus
         Get
-            Return intAlgusSym 'atribuudi küsimusel tagasta intAlgusSymbol
+            Return intAlgusSym 'atribuudi kÃ¼simusel tagasta intAlgusSymbol
         End Get
         Set(value As Integer)
-            intAlgusSym = value 'atribuudi väärtuste seadistamine
+            intAlgusSym = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
     'Atribuut intLopp seadistamine
     Private Property intLopp As Integer Implements ITeisendused.intLopp
         Get
-            Return intLoppSym 'atribuudi küsimusel tagasta intLoppSymbol
+            Return intLoppSym 'atribuudi kÃ¼simusel tagasta intLoppSymbol
         End Get
         Set(value As Integer)
-            strPooratavTxt = value 'atribuudi väärtuste seadistamine
+            strPooratavTxt = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
     'Atribuut strTekst seadistamine
     Private Property strTekst As String Implements ITeisendused.strTekst
         Get
-            Return strPooratavTxt 'atribuudi küsimusel tagasta strPooratavTekst
+            Return strPooratavTxt 'atribuudi kÃ¼simusel tagasta strPooratavTekst
         End Get
         Set(value As String)
-            strPooratavTxt = value 'atribuudi väärtuste seadistamine
+            strPooratavTxt = value 'atribuudi vÃ¤Ã¤rtuste seadistamine
         End Set
     End Property
 
-    'Funktsioon algoritmiliselt teksti tagurpidi pööramiseks
+    'Funktsioon algoritmiliselt teksti tagurpidi pÃ¶Ã¶ramiseks
     Public Function reversedText() As String
         Dim tempArray As String = " "
         Dim i As Integer
