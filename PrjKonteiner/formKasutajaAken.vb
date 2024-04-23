@@ -2,6 +2,9 @@
 Imports PrjTekstiPooraja2
 
 Public Class formKasutajaAken
+
+
+
     Private Sub btnPoora1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) _
         Handles btnPoora1.Click
         'Objekti loomine liidese baasil; referentsmuutuja pooraja deklatsatsioon
@@ -29,6 +32,7 @@ Public Class formKasutajaAken
     Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
         timerUuenda.Enabled = True
         btnStart.Enabled = False
+        btnStop.Enabled = True
     End Sub
 
     Private Sub timerUuenda_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) _
@@ -46,6 +50,7 @@ Public Class formKasutajaAken
     Private Sub btnStop_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStop.Click
         timerUuenda.Enabled = False
         btnStart.Enabled = True
+        btnStop.Enabled = False
     End Sub
 
     'Kirjutame funktsioon pikkuse arvu tekstis leidmiseks kasutades funktsioon Len()
@@ -78,5 +83,9 @@ Public Class formKasutajaAken
         Else
             teisendus = New CTekstiPooraja
         End If
+    End Sub
+
+    Private Sub formKasutajaAken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnStop.Enabled = False
     End Sub
 End Class
