@@ -144,9 +144,9 @@ Partial Class formKasutajaAken
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(323, 88)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "0"
         '
         'CAlgoCheck
         '
@@ -163,9 +163,9 @@ Partial Class formKasutajaAken
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(392, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(13, 13)
         Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "0"
         '
         'formKasutajaAken
         '
